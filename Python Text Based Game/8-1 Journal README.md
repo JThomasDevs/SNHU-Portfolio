@@ -13,20 +13,25 @@ This may be because it is a fairly straightforward program but I also give credi
 With such a simple program, there is not /much/ room for improvement BUT one immediate thing I noticed upon revisiting this code
 is the difference between how I wrote if-else statements back then and how I write them now.
 Oftentimes, when you have a single if qualifier, followed by an "else", you do not need to write "else:"
+
 You can simply write it as:
+```
 if "this thing":
    then "other thing"
 "different thing"
-
+```
 Instead of:
+```
 if "this thing":
    then "other thing"
 else:
    "different thing"
+```
 
 I don't know that this change would make my code more efficient or more secure but stylistically, it looks cleaner and is just as easy to understand.
 
 Additionally, I could "class-ify" my program to avoid the use of the global keyword.
+
 I only try to avoid the global keyword as it has caused issues in other, personal projects.
 
 (4)
