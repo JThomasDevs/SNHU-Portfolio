@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Weight Tracker Project</string>
+    <string name="username_input">Username</string>
+    <string name="password_input">Password</string>
+    <string name="go_back">Back</string>
+    <string name="add_weight">Add Weight</string>
+    <string name="set_goal">Set Goal</string>
+    <string name="save_button">Save</string>
+    <string name="delete_button">DELETE</string>
+    <string name="notification_bell_description">Notification bell</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="username_required">You must enter a username</string>
+    <string name="password_length">Password must contain at least 8 characters</string>
+    <string name="register_error">An error occurred while registering your account.\nPlease try again.</string>
+    <string name="invalid_login">Invalid username or password.\nPlease try again.</string>
+    <string name="weight_button_text">Weight:\n%.1f%s\n\n%tD</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="error_save_weight_text">An error occurred while trying to save.\nPlease try again.</string>
+    <string name="error_delete_weight_text">An error occurred while deleting.\nPlease try again.</string>
+    <string name="error_date_text">Invalid date entered.\nPlease try again.</string>
+    <string name="error_empty_weight_text">You must input a valid weight.</string>
+    <string name="goal_weight_text_view">Goal Weight</string>
+    <string name="enter_goal_weight">Please enter a goal weight.</string>
+    <string name="error_saving_goal">An error occurred while saving.\nPlease try again.</string>
+    <string name="goal_weight">%.1f%s</string>
+    <string name="not_set">Not Set</string>
+    <string-array name="weight_units">
+        <item>lb</item>
+        <item>kg</item>
+    </string-array>
+</resources>

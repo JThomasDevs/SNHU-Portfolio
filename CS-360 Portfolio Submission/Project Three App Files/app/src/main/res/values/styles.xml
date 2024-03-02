@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="login_element">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+    <style name="banner_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingHorizontal">8dp</item>
+        <item name="android:layout_marginHorizontal">16dp</item>
+        <item name="android:backgroundTint">@color/bgGray</item>
+    </style>
+    <style name="sticky_banner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/bgGray</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:paddingHorizontal">8dp</item>
+    </style>
+    <style name="grid_button">
+        <item name="android:layout_height">105dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_columnSpan">1</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:lines">4</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/bgGray</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center|top</item>
+        <item name="android:backgroundTint">@color/gridButton</item>
+    </style>
+    <style name="navButton">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/navButton</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/bgGray</item>
+        <item name="android:paddingHorizontal">8dp</item>
+    </style>
+</resources>

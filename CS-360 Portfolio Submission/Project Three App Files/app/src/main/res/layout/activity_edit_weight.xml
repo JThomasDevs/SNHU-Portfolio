@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditWeightActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/sticky_banner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/goBackButton"
+            style="@style/banner_button"
+            android:text="@string/go_back"
+            android:drawableLeft="@drawable/left_arrow"
+            android:onClick="goBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/weightLabel"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:labelFor="@id/editWeight"
+        android:text="Weight"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/editWeight"
+        app:layout_constraintStart_toStartOf="@id/editWeight"
+        app:layout_constraintEnd_toEndOf="@id/editWeight"/>
+
+    <EditText
+        android:id="@+id/editWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.35"/>
+
+    <Spinner
+        android:id="@+id/weightUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:entries="@array/weight_units"
+        app:layout_constraintStart_toEndOf="@id/editWeight"
+        app:layout_constraintBaseline_toBaselineOf="@id/editWeight" />
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/editDay"
+        android:text="Date"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/editMonth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/editMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:layout_marginTop="16dp"
+        android:inputType="number"
+        android:hint="MM"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@id/editWeight"
+        app:layout_constraintEnd_toStartOf="@id/editDay"
+        app:layout_constraintTop_toBottomOf="@id/weightLabel"/>
+
+    <EditText
+        android:id="@+id/editDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:inputType="number"
+        android:hint="DD"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@id/editMonth"
+        app:layout_constraintEnd_toStartOf="@id/editYear"
+        app:layout_constraintTop_toBottomOf="@id/weightLabel" />
+
+    <EditText
+        android:id="@+id/editYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:inputType="number"
+        android:hint="YYYY"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@id/editDay"
+        app:layout_constraintEnd_toEndOf="@id/editWeight"
+        app:layout_constraintTop_toBottomOf="@id/weightLabel" />
+
+    <Button
+        android:id="@+id/saveButton"
+        style="@style/navButton"
+        android:layout_width="0dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/save_button"
+        android:onClick="saveWeight"
+        app:layout_constraintStart_toStartOf="@id/editWeight"
+        app:layout_constraintEnd_toEndOf="@id/editWeight"
+        app:layout_constraintTop_toBottomOf="@id/dateLabel"/>
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/errorColor"
+        android:layout_marginTop="12dp"
+        android:text="@string/delete_button"
+        android:onClick="deleteWeight"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/editWeight"
+        app:layout_constraintEnd_toEndOf="@id/editWeight"
+        app:layout_constraintTop_toBottomOf="@id/saveButton"/>
+
+    <TextView
+        android:id="@+id/error_save_weight_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/errorColor"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:ems="14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deleteButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

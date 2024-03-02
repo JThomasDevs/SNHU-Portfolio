@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetGoalActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBanner"
+        style="@style/sticky_banner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/goBackButton"
+            style="@style/banner_button"
+            android:text="@string/go_back"
+            android:drawableLeft="@drawable/left_arrow"
+            android:onClick="goBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <!-- On Click, navigate the user back to the Grid screen -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/goalWeightLabel"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:labelFor="@id/editGoalWeight"
+        android:text="@string/goal_weight_text_view"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/editGoalWeight"
+        app:layout_constraintStart_toStartOf="@id/editGoalWeight"
+        app:layout_constraintEnd_toEndOf="@id/editGoalWeight"/>
+
+    <EditText
+        android:id="@+id/editGoalWeight"
+        style="@style/login_element"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.35"
+        android:autofillHints="" />
+
+    <Spinner
+        android:id="@+id/weightUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:entries="@array/weight_units"
+        app:layout_constraintStart_toEndOf="@id/editGoalWeight"
+        app:layout_constraintBaseline_toBaselineOf="@id/editGoalWeight" />
+
+    <Button
+        android:id="@+id/saveButton"
+        style="@style/navButton"
+        android:layout_width="0dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/save_button"
+        android:onClick="setGoal"
+        app:layout_constraintStart_toStartOf="@id/editGoalWeight"
+        app:layout_constraintEnd_toEndOf="@id/editGoalWeight"
+        app:layout_constraintTop_toBottomOf="@id/goalWeightLabel"/>
+    <!-- On Click, verify correct data formatting and on success,
+         attempt to save the data to the app's database. On success,
+         display a brief Toast message verifying data has been saved
+         and navigate user back to the Grid screen.
+         On formatting or save failure, display an error message
+         using the TextView below. -->
+
+    <TextView
+        android:id="@+id/error_goal_weight_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/errorColor"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:ems="14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saveButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
