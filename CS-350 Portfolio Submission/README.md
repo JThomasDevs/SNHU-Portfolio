@@ -1,0 +1,9 @@
+The project was to develop a working prototype for a thermostat and from this prototype, analyze various architectures to recommend the one that best suits the needs of the client, the code, and the future of the project.
+
+One thing I did particularly well in this project is extensively debugging the discrepancies between the starter code and the starting implementation I was able to use because of the differences between the UART class and the UART2 class. From the first class to the second, there are variables that became obsolete, sub-fields that changed name or location, and methods that changed signatures. Making these changes between the provided code and my actual starting point involved a deep dive into the header files of the UART2 class to manually make changes based on the doc comments provided.
+
+One thing I could improve upon is being more detailed in the documentation for my state-machine. Detailed documentation is one of the cornerstones for maintainable applications and the more detail that is given, the easier it will be to continue working instead of deciphering the meaning of some vague function.
+
+If I were to work with embedded systems again, two tools I would make use of are RIMS and RIBS, both of which can be used to simulate and create state-machine functionality on a virtual microcontroller. Especially in a world where certain pieces of hardware may be financially out of reach for some, tools like RIMS and RIBS lower the barrier of entry to make development for such hardware more accessible.
+
+The primary skill gained from this project and the larger course is an intimate knowledge of how to design, implement, and properly debug state-machines. As I mature as a programmer, I realize that state-machines are a widespread and extremely useful format for controlling contextual actions within code.
